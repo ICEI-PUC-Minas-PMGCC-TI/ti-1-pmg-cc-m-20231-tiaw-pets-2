@@ -14,3 +14,4 @@
 ## Professores responsáveis
 
 * Rommel Vieira Carneiro
+* Carlos Augusto Paiva da Silva Martins
