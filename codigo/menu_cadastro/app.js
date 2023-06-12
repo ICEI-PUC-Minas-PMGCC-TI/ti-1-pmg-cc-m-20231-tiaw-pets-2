@@ -72,8 +72,60 @@ function buscaPessoa (dados) {
     
 }
 
+const handlePhone = (event) => {
+    let input = event.target
+    input.value = phoneMask(input.value)
+  }
+  
+  const phoneMask = (value) => {
+    if (!value) return ""
+    value = value.replace(/\D/g,'')
+    value = value.replace(/(\d{2})(\d)/,"($1) $2")
+    value = value.replace(/(\d)(\d{4})$/,"$1-$2")
+    return value
+  }
+
+  function validaDados (){
+  var dadosValidos = 1;
+  var nome     = document.getElementById ('campoNome').value;
+  var email    = document.getElementById ('campoEmail').value;
+  var sexo     = document.getElementById ('inlineFormSelectPref').value;
+  var telefone = document.getElementById ('campoTelefone').value;
+
+    if(nome == ""){
+        alert("Nome não informado!"); 
+        dadosValidos = 0;
+
+    }
+
+    if(email == ""){
+        alert("E-mail não informado!"); 
+        dadosValidos = 0;
+    }
+
+    if(sexo == ""){
+        alert("Sexo não informado!"); 
+        dadosValidos = 0;
+    }
+
+    if(telefone == ""){
+        alert("Telefone não informado!"); 
+        dadosValidos = 0;
+    }
+
+    if(dadosValidos == 1){
+        incluirPessoa();
+        dadosValidos = 0;
+    }
+    else{
+        alert("Campos incorretos"); 
+        dadosValidos = 0;
+    }
+    
+  }
 // Configura os botões
-document.getElementById ('btn-cadastrar').addEventListener ('click', incluirPessoa);
+document.getElementById ('btn-cadastrar').addEventListener ('click', validaDados);
+
 
 
 

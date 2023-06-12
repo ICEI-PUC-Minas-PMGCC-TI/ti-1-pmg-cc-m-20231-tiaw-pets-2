@@ -33,22 +33,22 @@
       
         <div class="mb-3">
           <label for="inputName" class="form-label">Nome</label>
-          <input type="text" class="form-control" id="campoNome" placeholder="Digite o nome">
+          <input type="text" class="form-control" id="campoNome" minlength="5" placeholder="Digite o nome" required>
         </div>
 
         <div class="mb-3">
           <label for="inputEmail4" class="form-label">Email</label>
-          <input type="email" class="form-control" id="campoEmail" placeholder="Digite o e-mail">
+          <input type="email" class="form-control" id="campoEmail" minlength="10" placeholder="Digite o e-mail" required>
         </div>
 
         <div class="mb-3">
           <label for="inputPassword4" class="form-label">Senha</label>
-          <input type="password" class="form-control" id="campoSenha" placeholder="Digite a senha">
+          <input type="password" class="form-control" id="campoSenha" minlength="4" placeholder="Digite a senha" required>
         </div>
 
         <div class="mb-3">
           <label for="inputPhoneNumber" class="form-label">Telefone</label>
-          <input type="tel" class="form-control" id="campoTelefone" placeholder="Digite o telefone">
+          <input type="tel" minlength="14"  maxlength="15"  onkeyup="handlePhone(event)" class="form-control" id="campoTelefone" placeholder="Digite o telefone" required>
         </div>
      
         <div class="mb-3">

@@ -1,3 +1,26 @@
+function validaDados(){
+    var dadosValidos = 1;
+    var lbEmail      = document.getElementById ('campoEmail').value;
+    var lbSenha        = document.getElementById ('campoSenha').value;
+
+    if(lbEmail == ""){
+        alert("E-mail não informado!"); 
+        dadosValidos = 0;
+    }
+
+    if(lbSenha == ""){
+        alert("Senha não informada!"); 
+        dadosValidos = 0;
+    }
+
+    if(dadosValidos == 1){
+        carregaDados();
+    }
+
+    
+}
+
+
 function carregaDados () {
     let strDados = localStorage.getItem('db');
     let objDados = {};
@@ -39,4 +62,9 @@ function buscaPessoa () {
     alert("E-mail não cadastrado");
 }
 
-document.getElementById ('btn-entrar').addEventListener ('click', carregaDados);
+
+
+// Configura os botões
+document.getElementById ('btn-entrar').addEventListener ('click', validaDados);
+
+
