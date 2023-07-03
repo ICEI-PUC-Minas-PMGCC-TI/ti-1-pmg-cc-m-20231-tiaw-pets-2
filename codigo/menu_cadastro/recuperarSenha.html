@@ -33,12 +33,14 @@
       
         <div class="mb-3">
             <label for="inputEmail4" class="form-label">Digite o e-mail cadastrado</label>
-            <input type="email" class="form-control" id="lbl-email" placeholder="Digite o e-mail">
+            <input type="email" class="form-control" id="lbl-email" placeholder="Digite o e-mail" required>
         </div>
   
         <div class="mb-3">
+          <form method="post"> 
             <button type="submit" class="btn btn-primary" id="btn-recuperarSenha">Enviar</button>
-        </div>
+          </form>
+        </div>   
 
     </section>
 
@@ -47,5 +49,6 @@
     </footer>
     
     <script src="app3.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </body>
 </html>
